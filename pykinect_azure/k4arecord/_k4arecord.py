@@ -421,7 +421,5 @@ def k4a_playback_get_last_timestamp_usec(playback_handle):
 
 def VERIFY(result, error):
 	if result != K4A_RESULT_SUCCEEDED:
-		print(error)
 		traceback.print_stack()
-		sys.exit(1)
-
+		raise Exception(error)

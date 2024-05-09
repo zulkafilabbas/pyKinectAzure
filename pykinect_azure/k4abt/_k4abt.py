@@ -180,7 +180,5 @@ def k4abt_frame_get_capture(body_frame_handle):
 		
 def VERIFY(result, error):
 	if result != K4ABT_RESULT_SUCCEEDED:
-		print(error)
 		traceback.print_stack()
-		sys.exit(1)
-
+		raise Exception(error)
