@@ -40,7 +40,7 @@ pip install <this_package>.whl
 ## How to use this library
 
 * The original library was **tested in Windows 10 and Ubuntu 20.04** with the Kinect Azure SDK 1.4.0 and 1.4.1.
-* This fork was tested has been **tested on Windows 11 (latest updates - as of 10/5/2024), Windows 10 (latest updates - as of 10/5/2024), Kinect Azure SDK v1.4.1, Body Tracking SDK v1.1.2, Nvidia 1660Ti GPU (Desktop), Nvidia 1650 GPU (Laptop), Nvidia 4060 GPU (Laptop)**
+* This fork was tested has been **tested on Windows 11 (latest updates - as of 10/5/2024), Windows 10 (latest updates - as of 10/5/2024), Kinect Azure SDK v1.4.1, Body Tracking SDK v1.1.2, DK Firmware 1.6.110079014, Nvidia 1660Ti GPU (Desktop), Nvidia 1650 GPU (Laptop), Nvidia 4060 GPU (Laptop)**
 
   - **Windows:** When using the pyKinectAzure class, it requires the **path to the k4a.dll module**, make sure that the path is the correct one for your Kinect Azure SDK version. By default the path (**module_path**) is set to  ```C:\\Program Files\\Azure Kinect SDK v1.4.0\\sdk\\windows-desktop\\amd64\\release\\bin\\k4a.dll```.
 
@@ -75,7 +75,7 @@ Feel free to send pull requests.
 Bug reports are also appreciated. Please include as much details as possible.
 
 ## TODO:
-### Planned additions
+### Possible additions
 - [ ] Audio capture
 - [ ] Data streaming wrappers for Kinect & Audio data
 - [ ] Remote Heartbeat
