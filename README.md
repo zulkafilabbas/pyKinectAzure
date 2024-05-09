@@ -96,6 +96,9 @@ Bug reports are also appreciated. Please include as much details as possible.
 - [ ] https://github.com/ibaiGorordo/pyKinectAzure/compare/master...ShivinDass:pyKinectAzure:master
 - [ ] https://github.com/ibaiGorordo/pyKinectAzure/compare/master...Kami-code:pyKinectAzure:master
 
+### Other related packages
+- https://pypi.org/project/pykinect-recorder/
+
 ### Beyond
 - [ ] https://github.com/isarandi/metrabs 
 - [ ] https://github.com/zef1611/AIC23_NLRetrieval_HCMIU_CVIP 
