@@ -136,3 +136,6 @@ Bug reports are also appreciated. Please include as much details as possible.
 ### Future ideas
 - [ ] Run Deep Learning models on Kinect data (Openpose 3D skeleton, semantic segmentation with depth, monocular depth estimation validation)
 - [ ] Track passive infrared marker for motion capture analysis
+
+# To Build .whl file use
+python setup.py bdist_wheel
