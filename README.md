@@ -103,6 +103,7 @@ Bug reports are also appreciated. Please include as much details as possible.
 - [ ] https://github.com/isarandi/metrabs 
 - [ ] https://github.com/zef1611/AIC23_NLRetrieval_HCMIU_CVIP 
 - [ ] https://github.com/HiROS-unipd
+- [ ] https://github.com/Varun-Tandon14/Implementation-of-Cross-View-Tracking-for-Multi-Human-3D-Pose-Estimation-at-over-100-FPS
 - [ ] https://github.com/LiheYoung/Depth-Anything 
 - [ ] https://github.com/WongKinYiu/yolov9 
 - [ ] https://github.com/open-mmlab/mmpose 
