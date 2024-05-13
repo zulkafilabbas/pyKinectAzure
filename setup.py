@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='pykinect_azure',
-    version='0.0.4',
+    version='0.0.5',
     license='MIT',
     description='Python library to run Kinect Azure DK SDK functions',
     long_description=long_description,
