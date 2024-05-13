@@ -66,6 +66,9 @@ try:
         except KeyboardInterrupt:
             logging.info('User stopped program')
             break
+        except SystemExit:
+            logging.info('SystemExit caught')
+            continue
         except Exception as e:
             logging.error(f'Error during processing: {e}')
             continue
