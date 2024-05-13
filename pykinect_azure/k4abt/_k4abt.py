@@ -35,16 +35,12 @@ def setup_onnx_provider_linux():
 
 def setup_onnx_provider_windows():
 	try:
-		ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/onnxruntime_providers_cuda.dll")
-		k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_CUDA
-		# ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/directml.dll")
-		# k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_DIRECTML
+		ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/directml.dll")
+		k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_DIRECTML
 	except Exception as e:
 		try:
-			ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/directml.dll")
-			k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_DIRECTML
-			# ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/onnxruntime_providers_cuda.dll")
-			# k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_CUDA
+			ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/onnxruntime_providers_cuda.dll")
+			k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_CUDA
 		except Exception as e:
 			k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_CPU
 
