@@ -34,25 +34,16 @@ def setup_onnx_provider_linux():
 		k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_CPU
 
 def setup_onnx_provider_windows():
-	# Forcing CUDA
 	try:
-		ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/onnxruntime_providers_cuda.dll")
-		k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_CUDA
-		# ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/directml.dll")
-		# k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_DIRECTML
+		ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/NOTdirectml.dll")
+		k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_DIRECTML
 	except Exception as e:
 		try:
-			# ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/onnxruntime_providers_cuda.dll")
-			# k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_CUDA
-			# ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/directml.dll")
-			# k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_DIRECTML
-			raise Exception('DIRECTML -> CUDA ENFORCED: CUDA ONNXRUNTIME was not loaded, set the environment PATH variable properly?')
-
+			ctypes.cdll.LoadLibrary("C:/Program Files/Azure Kinect Body Tracking SDK/tools/onnxruntime_providers_cuda.dll")
+			k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_GPU_CUDA
 		except Exception as e:
 			# k4abt_tracker_default_configuration.processing_mode = K4ABT_TRACKER_PROCESSING_MODE_CPU
-			# This should not run with current settings
-			raise Exception('CPU -> CUDA ENFORCED: CUDA ONNXRUNTIME was not loaded, set the environment PATH variable properly?')
-			# 'Add in the System PATH variable: "C:\Program Files\Azure Kinect Body Tracking SDK\tools" w/o quotes and try again'
+			raise ValueError
 
 
 def k4abt_tracker_create(sensor_calibration, config, tracker_handle):
