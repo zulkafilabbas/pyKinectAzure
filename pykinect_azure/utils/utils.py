@@ -33,10 +33,7 @@ def get_k4abt_module_path():
 
     # Otherwise return the Windows version
     # return 'C:\\Program Files\\Azure Kinect Body Tracking SDK\\sdk\\windows-desktop\\amd64\\release\\bin\\k4abt.dll'
-
-    # Probably identical, but checking with exact dll as the simpler viewer tool
     return 'C:\\Program Files\\Azure Kinect Body Tracking SDK\\tools\\k4abt.dll'
-
 def get_k4arecord_module_path(modulePath):
     return modulePath.replace('k4a', 'k4arecord')
 
@@ -48,19 +45,7 @@ def get_k4abt_lite_model_path():
 
     # Return the Windows version
     # return 'C:/Program Files/Azure Kinect Body Tracking SDK/sdk/windows-desktop/amd64/release/bin/dnn_model_2_0_lite_op11.onnx'.encode('utf-8')
-    
-    # Qucikfix: Not lite (or clean), see [1] Fix later below, need to amend and re-test later.
     return 'C:/Program Files/Azure Kinect Body Tracking SDK/tools/bin/dnn_model_2_0_op11.onnx'.encode('utf-8')
-
-# [1] Fix later
-# def get_k4abt_model_path():
-
-#     # Check if it is a Linux system
-#     if platform.system().lower() == 'linux':
-#         return None
-
-#     # Return the Windows version
-#     return 'C:/Program Files/Azure Kinect Body Tracking SDK/tools/bin/dnn_model_2_0_op11.onnx'.encode('utf-8')
 
 def getdict(struct):
 	result = {}
